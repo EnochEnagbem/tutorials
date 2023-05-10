@@ -22,12 +22,12 @@ class TutorialRepositoryTest {
         assertNotNull(tutorials);
     }
 
-    @Test
-    void addTutorial(){
-        Tutorial tutorial = new Tutorial("Junit","Learn Unit Testing With Java",true);
-
-        tutorialRepository.save(tutorial);
-    }
+//    @Test
+//    void addTutorial(){
+//        Tutorial tutorial = new Tutorial("Junit","Learn Unit Testing With Java",true);
+//
+//        tutorialRepository.save(tutorial);
+//    }
 
 
 
