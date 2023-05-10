@@ -27,6 +27,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build and Deploy
         run: |
+          ./gradlew build
           git config --global user.name "Enagbem"
           git config --global user.email "enoch.kumanyenu99@yahoo.com"
           git checkout -B gh-pages
