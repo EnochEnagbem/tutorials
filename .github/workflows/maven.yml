@@ -20,3 +20,21 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Test with Maven
       run: mvn -B test --file pom.xml
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and Deploy
+        run: |
+          git config --global user.name "Enagbem"
+          git config --global user.email "enoch.kumanyenu99@yahoo.com"
+          git checkout -B gh-pages
+          git add -f build/
+          git commit -m "Build and deploy to gh-pages"
+          git push origin gh-pages --force-with-lease
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+
