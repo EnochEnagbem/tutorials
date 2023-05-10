@@ -25,7 +25,7 @@ jobs:
     needs: build
 
     steps:
-      - name: Deploy to GitHub
+      - name: Deploy to GitHub Using GitHub Action
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
