@@ -16,10 +16,11 @@ jobs:
       with:
         java-version: 17
 
-    - name: Build with Maven
+    - name: Build App with Maven
       run: mvn -B package --file pom.xml
-    - name: Test with Maven
+    - name: Test App with Maven
       run: mvn -B test --file pom.xml
+
 
   deploy:
     runs-on: ubuntu-latest
